@@ -1,11 +1,15 @@
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#">Главная</a></li>
-  <li><a href="#">Профиль</a></li>
-  <li><a href="#">Сообщение</a></li>
+  <li>{{#link-to 'index'}}<h>Главная страница</h>{{/link-to}}</li>
+  <li>{{#link-to 'users'}}<h>Список пользователей</h>{{/link-to}}</li>
+  
 </ul>
 
 
 
-<h1 id="title">Welcome to Ember</h1>
+
 
 {{outlet}}

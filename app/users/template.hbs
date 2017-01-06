@@ -1,11 +1,31 @@
-<h2>List of Users</h2>
+{{!--<h2>List of Users</h2>
 
 <ul>
   {{#each model as |item|}}
     <li>{{#link-to 'user' item.id}} {{item.id}}  {{item.name}} - {{item.email}}{{/link-to}}</li>
   {{/each}}
-</ul>
+</ul>--}}
+
+<div class="panel-group" id="accordion">
+  
+  <div class="panel panel-default">
+{{#each model as |item|}}  
+    <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#{{item.id}}" >
+               <p><span class="glyphicon glyphicon-user"></span>{{#link-to 'users.uuser' item.id}} {{item.id}} - {{item.name}} ({{item.website}}){{/link-to}}</p>
+              </a>
+            </h4>
+    </div>
+    <div id="{{item.id}}" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{outlet}}
+ 
+      </div>
+    </div>
+ {{/each}}
+  </div>
+  
+</div>
 
 
-
-{{outlet}}
