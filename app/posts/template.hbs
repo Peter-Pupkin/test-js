@@ -1,0 +1,12 @@
+{{outlet}}
+
+<h1>Users.use</h1>
+{{!--<ul>--}}
+{{#each model as |item|}}  
+  {{!--{{#if item.id < 21 }}--}}
+   <li><span class="glyphicon glyphicon-file"></span> Post # {{item.id}} - Post Title - {{item.title}} // (Post Body - {{item.body}})</li>
+  {{!--{{/if}}  --}}
+{{/each}}
+ 
+{{!--</ul> --}}
+
