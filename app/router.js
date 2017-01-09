@@ -10,8 +10,9 @@ Router.map(function() {
   this.route('users', {path: '/user'}, function() {
     this.route('uuser', { path: '/user/:uuser_id' });
   });
-  this.route('user', { path: '/user/:user_id' });
-  this.route('users.use');
+  // this.route('user', { path: '/user/:user_id' });
+  this.route('posts');
+ 
 });
 
 export default Router;
