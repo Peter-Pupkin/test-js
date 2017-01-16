@@ -4,7 +4,7 @@
 {{!--<ul>--}}
 {{#each model as |item|}}  
   {{!--{{#if item.id < 21 }}--}}
-   <li><span class="glyphicon glyphicon-file"></span> Post # {{item.id}} - Post Title - {{item.title}} // ( <b>Author</b> - {{item.user.name}})</li>
+   {{list-posts post=item}}
   {{!--{{/if}}  --}}
 {{/each}}
  

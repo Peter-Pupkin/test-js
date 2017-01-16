@@ -1,0 +1,18 @@
+ <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#{{user.id}}" >
+               <p><span class="glyphicon glyphicon-heart"></span>{{#link-to 'users.uuser' user.id}} {{user.id}} - {{user.name}} ({{user.website}}){{/link-to}}</p>
+              </a>
+            </h4>
+    </div>
+    <div id="{{user.id}}" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{outlet}}
+ 
+      </div>
+    </div>
+
+
+
+
+{{yield}}
