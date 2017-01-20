@@ -1,4 +1,15 @@
-<li><span class="glyphicon glyphicon-file"></span> Post # {{post.id}} - Post Title - {{post.title}} // 
+<li><a {{action "setBodyView" body }}><span class="glyphicon glyphicon-time"></span> 
+Post # {{post.id}} - <b>Post Title</b> - {{post.title}}</a>
+<br/>
+
+{{!--<li><a{{action "setBodyView" body}}<span class="glyphicon glyphicon-file"></span> Post # {{post.id}} - Post Title - {{post.title}}</a> // --}}
 {{list-posts/author-post Author=post.user.name }}</li>
+
+
+{{#if body}}
+
+      <p>{{post.body}}</p>
+
+{{/if}}        
 
 {{yield}}
