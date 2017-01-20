@@ -1,4 +1,9 @@
-<li><a {{action "setBodyView" body }}><span class="glyphicon glyphicon-time"></span> 
+
+
+
+
+
+<li><a {{action "setBodyView" fff }}><span class="glyphicon glyphicon-time"></span> 
 Post # {{post.id}} - <b>Post Title</b> - {{post.title}}</a>
 <br/>
 
@@ -6,9 +11,9 @@ Post # {{post.id}} - <b>Post Title</b> - {{post.title}}</a>
 {{list-posts/author-post Author=post.user.name }}</li>
 
 
-{{#if body}}
+{{#if fff}}
 
-      <p>{{post.body}}</p>
+      <p>{{post.id}}</p>
 
 {{/if}}        
 
