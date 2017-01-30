@@ -1,11 +1,17 @@
-{{outlet}}
+{{!--<h2>Posts component--}}
+{{#if activePost}}
+    (Last active post: {{activePost.title}})
+{{/if}}
+{{!--</h2>--}}
 
-
-
-<li><span class="glyphicon glyphicon-file"></span> Post # {{post.id}} - Post Title - {{post.title}} <br/>// ( <b>Author</b> - {{post.user.name}})</li>
-
+{{#each posts as |currentPost|}}
+    {{main-post/m-post 
+        showBody=(eq currentPost activePost)
+        post=currentPost 
+        setBodyView=(action 'setBodyView')
+        }}
+{{/each}}
 {{yield}}
-
 
 
 

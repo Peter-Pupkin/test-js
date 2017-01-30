@@ -1,19 +1,9 @@
+<h3>{{post.title}}</h3>
 
 
-{{!--<li><a {{action "setBodyView" fff }}><span class="glyphicon glyphicon-time"></span> - <b>Author</b> - {{Author}}</font></a>--}}
-<li><a {{action "setBodyView" fff }}><span class="glyphicon glyphicon-time"></span> 
-Post # {{post.id}} - <b>Post Title</b> - {{post.title}}</a>
-<br/>
-
-{{list-posts/author-post Author=post.user.name }}</li>
-
-
-{{#if fff}}
-
-      <p>{{post.body}}</p>
-
-{{/if}}        
-
-
+{{#if showBody}}
+    <div>{{post.body}}</div>
+{{/if}}
+<hr />
 
 {{yield}}

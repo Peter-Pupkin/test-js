@@ -2,11 +2,12 @@
 
 {{!--<h1>Users.use</h1>--}}
 {{!--<ul>--}}
-{{#each model as |item|}}  
+{{!--{{#each model as |item|}}  --}}
   {{!--{{#if item.id < 21 }}--}}
-   {{main-post post=item}}
+  {{main-post posts=model}}
+{{outlet}}
   {{!--{{/if}}  --}}
-{{/each}}
+{{!--{{/each}}--}}
  
 {{!--</ul> --}}
 
