@@ -6,9 +6,10 @@
 
 {{#each posts as |currentPost|}}
     {{main-post/m-post 
-        showBody=(eq currentPost activePost1
-                 or eq currentPost activePost2)
-        post=currentPost         
+        showBody=(or (eq currentPost activePost1)
+                (eq currentPost activePost2))
+        post=currentPost
+              
         onPostClick=(action 'setBodyView')
         }}
 {{/each}}
