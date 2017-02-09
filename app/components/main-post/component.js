@@ -55,7 +55,6 @@ export default Ember.Component.extend({
         }
     }
 
-}
 
     // if (activePost1 !== post && activePost2 !== post) {
     //     this.set('activePost1', post);
