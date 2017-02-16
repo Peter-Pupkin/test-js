@@ -84,7 +84,6 @@ export default Ember.Component.extend({
 
     // }
  posts: [],
-  isShowingBody: false,
   post: null,
   onPostClick: null,
   // activePost: null,

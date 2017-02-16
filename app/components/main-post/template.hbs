@@ -1,27 +1,13 @@
-{{!--<h2>Posts component--}}
-{{!--{{#if activePost}}
-    (Last active post: {{activePost.title}})
-{{/if}}
-{{!--</h2>--}}
-
-{{#each posts as |currentPost|}}
-    {{main-post/m-post 
-        showBody=(or (eq currentPost activePost1)
-                (eq currentPost activePost2))
-        post=currentPost
-              
-        onPostClick=(action 'setBodyView')
-        }}
-{{/each}}--}}
+<h2>Posts component</h2>
 {{#if activePost}}
     (Last active post: {{activePost.title}})
 {{/if}}
 
 {{#each posts as |currentPost|}}
-  {{main-post/post-item 
+  {{main-post/m-post
     post=currentPost
-    onPostSelect=(action 'onPostClick')
-    isShowingBody=(in-list currentPost activePosts)
+    onPostClick=(action 'onPostClick')
+    showBody=(in-list currentPost activePosts)
     }}
 {{/each}}
 {{yield}}
