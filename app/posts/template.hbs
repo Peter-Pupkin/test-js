@@ -1,13 +1,2 @@
-{{outlet}}
-
-{{!--<h1>Users.use</h1>--}}
-{{!--<ul>--}}
-{{!--{{#each model as |item|}}  --}}
-  {{!--{{#if item.id < 21 }}--}}
-  {{main-post posts=model}}
-{{outlet}}
-  {{!--{{/if}}  --}}
-{{!--{{/each}}--}}
- 
-{{!--</ul> --}}
-
+ {{main-post posts=model onPostButtonClickHandler=(action 'onPostButtonClick')}}
+ {{outlet}}

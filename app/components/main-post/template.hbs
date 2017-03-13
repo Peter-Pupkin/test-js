@@ -1,19 +1,7 @@
 <h2>Posts component</h2>
 {{#if activePost}}
-    (Last active post: {{activePost.title}})
-{{/if}}
-
-{{#each posts as |currentPost|}}
-  {{main-post/m-post
-    post=currentPost
-    onPostClick=(action 'onPostClick')
-    showBody=(in-list currentPost activePosts)
-    }}
-{{/each}}
-{{yield}}
-
-
-
-
-
-
+ (Last active post: {{activePost.title}}) 
+{{/if}} 
+{{#each posts as |currentPost|}} {{main-post/m-post post=currentPost
+onPostClick=(action 'onPostClick') onBodyButtonClick=(action 'onButtonClickInItemBody') showBody=(in-list currentPost activePosts)
+}} {{/each}} {{yield}}

@@ -12,7 +12,8 @@ Router.map(function() {
   });
   // this.route('user', { path: '/user/:user_id' });
   this.route('posts');
- 
+
+  this.route('detail-item-route',  { path: '/dir/:post_id' });
 });
 
 export default Router;

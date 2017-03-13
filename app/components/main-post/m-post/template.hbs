@@ -2,8 +2,6 @@
 
 
 {{#if showBody}}
-    <div>{{post.body}}</div>
-{{/if}}
-<hr />
-
-{{yield}}
+<div>{{post.body}}</div>
+<button type="button" name="button" class="ui teal button tiny" {{action "onButtonClickInBody"}}>Open item</button> {{/if}}
+<hr /> {{yield}}
